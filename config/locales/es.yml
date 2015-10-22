@@ -1,31 +1,41 @@
 es:
+  hello: "Hello world"
+  
   activerecord:
     models:
       article: "Acticulo"
     attributes:
-      title:
-        title: "Titulo"   # <= here
+      article:
+            title: "Titulo"
+            text: "Texto"
+      comment:
+            commenter: "Usuario"
+            body: "Comentario"
+
     errors:
-    
+
       models:
         article:
           attributes:
             title:
               blank: "no puede estar vacío."
               too_short: "El texto tiene que contener más de 5 caracteres"
-        
+        comment:
+           attributes:
+             commenter:
+               blank: "no puede estar vacío."
+               too_short: "El texto tiene que contener más de 3 caracteres"             
+             body:
+               blank: "no puede estar vacío."
+               too_short: "El texto tiene que contener más de 5 caracteres"
+              
+  
   helpers:
     submit:
-      article:
-        create: "Crear"
-        update: "Modificar"
+        article:
+          create: "Crear"
+          update: "Modificar"        
+        comment:
+          create: "Enviar"
         
-    label:
-      article:
-        title: "Titulo"
-        text: "Texto"
-        
-    
-              
-              
               

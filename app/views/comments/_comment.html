@@ -1,0 +1,15 @@
+<p>
+    <strong>Usuario: </strong>
+    <%= comment.commenter %>
+  </p>
+ 
+  <p>
+    <strong>Comentario:</strong>
+    <%= comment.body %>
+  </p>
+  
+ <p>
+  <%= link_to 'Borrar comentario', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Estas seguro de querer borrar este comentario?' } %>
+</p>

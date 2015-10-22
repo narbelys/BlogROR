@@ -1,4 +1,10 @@
-<p>
+<% flash.each do |name, msg| %>
+   <% msg.each do |mensaje| %>
+        <%= content_tag :div, mensaje, class: "alert alert-info" %>
+    <% end %>
+<% end %>
+  
+ <p>
   <strong>Titulo:</strong>
   <%= @article.title %>
 </p>
@@ -8,5 +14,13 @@
   <%= @article.text %>
 </p>
 
+<h2>Comments</h2>
+    <%= render @article.comments %>
 
-<%= link_to 'Regresar', articles_path %>
+
+<h2>Agregar comentario:</h2>
+
+<%= render 'comments/form' %>
+
+
+<%= link_to 'Regresar', articles_path %> | <%= link_to 'Editar', edit_article_path(@article) %>
