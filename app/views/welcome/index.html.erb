@@ -1,4 +1,147 @@
-<h1>Hello, Rails!</h1>
-<p>esto es una prueba</p>
 
-<%= link_to 'My Blog', controller: 'articles' %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Grayscale - Start Bootstrap Theme</title>
+
+
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <%= image_tag("in_ico.png", :alt => "Logo", :width => 40, :height => 40) %> <span class="light">Infórmate</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#http://narbelys.comli">Nosotros</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Infórmante</h1>
+                        <p class="intro-text">Publica tus artículos, opina y lee los de los demás</p>
+                        <%= link_to 'Ver todos los articulos', controller: 'articles' %>
+                        <!--<a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>-->
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="featured" class="container content-section text-center">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
+                    <div class="featured-container">
+                      <div class="featured-img">
+                        <%= image_tag("img3.jpg", :alt => "Img1", :width => 390, :height => 180) %>
+                        <h3><a href="#">Tips..</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="featured-container">
+                      <div class="featured-img">
+                        <%= image_tag("img2.jpg", :alt => "Img2", :width => 390, :height => 180) %>
+                        <h3><a href="#">Reflexiones..</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="featured-container">
+                      <div class="featured-img">
+                         <%= image_tag("img1.jpg", :alt => "Img3", :width => 390, :height => 180) %>
+                        <h3><a href="#">Curiosidades..</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </section>
+    
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="widget">
+                        <h3>Artículos recientes</h3>
+                        <ul class="list-unstyled">
+                            <li> <i class="fa fa-star"></i> <a href="#"> Lorem ipsum</a></li>
+                            <li> <i class="fa fa-star"></i> <a href="#"> Lorem</a></li>
+                            <li> <i class="fa fa-star"></i> <a href="#"> Lorem ipsum dolor</a></li>
+                            <li> <i class="fa fa-star"></i> <a href="#"> Lorem sit</a></li>
+                            <li> <i class="fa fa-star"></i> <a href="#"> Lorem dolor sit</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-5">
+                    <div class="footer-logo">
+                        <h2><i class="fa fa-heart"></i> Ncor.</h2>
+                        <p>narbelys@gmail.com</p>
+                        <br>
+                        <p class="muted">© 2015</p>
+                        <a href="#">Términos y servicios</a> <span>/</span> 
+                        <a href="#">Privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
     
+    http_basic_authenticate_with name: "narbe", password: "2301", only: :destroy
+    
   def index
     @comment = Article.all
   end
