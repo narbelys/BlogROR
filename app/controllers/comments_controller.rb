@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
     print @comment.errors.full_messages
       
     if @comment.save
-        flash[:success] = "Comentario enviado"
+        flash[:success] = ["Comentario enviado"]
       redirect_to article_path(@article)
     else
         flash[:error] = @comment.errors.full_messages

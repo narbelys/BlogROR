@@ -1,4 +1,4 @@
-<p>
+<!--<p>
     <strong>Usuario: </strong>
     <%= comment.commenter %>
   </p>
@@ -12,4 +12,33 @@
   <%= link_to 'Borrar comentario', [comment.article, comment],
                method: :delete,
                data: { confirm: 'Estas seguro de querer borrar este comentario?' } %>
-</p>
+</p>-->
+
+
+
+
+<article class="comment">
+    <header class="clearfix">
+        <img src="http://demo.hackerthemes.com/tales/html-version/v2-1/img/cat.png" alt="A Smart Guy" class="avatar" width="75" height="75">
+        <div class="meta">
+            <h3><a href="#"><%= comment.commenter %></a>
+            </h3>
+               
+            <span class="date">
+                27 July 2013
+            </span>
+            <span class="separator">
+                -
+            </span>
+            
+            <%= link_to 'Borrar comentario', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Estas seguro de querer borrar este comentario?' } %>               
+        </div>
+    </header>
+     <div class="body">
+        <%= comment.body %>
+    </div>
+</article>
+
+

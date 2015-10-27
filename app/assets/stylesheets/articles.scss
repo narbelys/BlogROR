@@ -196,3 +196,113 @@ blockquote {
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
+
+
+
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .element-item ---- */
+
+.grid-item {
+  position: relative;
+  float: left;
+  /*width: 100px;*/
+
+}
+
+
+.blog-main {
+    padding-top: 36px;
+    padding-bottom: 20px;
+}
+
+.blog-main, .blog-aside {
+    position: relative;
+}
+
+.blog-post {
+    margin-bottom: 90px;
+}
+
+.blog-post header h1 {
+    font-family: 'PT Serif', serif;
+    margin-bottom: 22px;
+}
+
+.blog-post header .lead-image {
+    position: relative;
+}
+
+.blog-post header .lead-image .meta {
+    padding-left: 30px;
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 15px;
+    background-color: #55a773;
+    background-color: rgba(85, 167, 115, 0.85);
+    color: #ccecd7;
+}
+
+.blog-post header .lead-image .meta .author, .blog-post header .lead-image .meta .date, .blog-post header .lead-image .meta .comments {
+    float: left;
+    margin: 10px 55px 0 0;
+}
+
+.blog-post header .lead-image .meta .author .data, .blog-post header .lead-image .meta .date .data, .blog-post header .lead-image .meta .comments .data {
+    line-height: 30px;
+}
+
+@media (min-width: 1200px){
+.blog-post .body {
+    padding-right: 30px;
+}
+}
+
+.blog-post .body {
+    margin-top: 20px;
+}
+
+
+.blog-post header .lead-image .meta a {
+    color: #ccecd7;
+}
+
+
+aside.comments, aside.create-comment {
+    margin-bottom: 100px;
+}
+
+aside.comments h2, aside.create-comment h2 {
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 130px;
+}
+
+aside.comments .comment {
+    margin: 130px 0 0 0;
+}
+
+aside.comments .comment header img {
+    float: left;
+    border-radius: 100px;
+}
+
+aside.comments .comment header .meta {
+    margin-left: 100px;
+    font-size: 14px;
+}
+
+aside.comments .comment header .meta h3 {
+    margin: 10px 0 0 0;
+    line-height: 27px;
+}
+
+aside.comments .comment header .meta h3 a {
+    color: #5b6268;
+}

@@ -1,9 +1,13 @@
+
 <% flash.each do |name, msg| %>
-   <% msg.each do |mensaje| %>
-        <%= content_tag :div, mensaje, class: "alert alert-info" %>
-    <% end %>
+             <% msg.each do |mensaje| %>
+              <%= content_tag :div, mensaje, class: "alert alert-info" %>
+             <% end %>
 <% end %>
-  
+
+<%
+=begin 
+%>
  <p>
   <strong>Titulo:</strong>
   <%= @article.title %>
@@ -24,4 +28,132 @@
 
 
 <%= link_to 'Regresar', articles_path %> | <%= link_to 'Editar', edit_article_path(@article) %>
+
+<%
+=end
+%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infórmate</title>
+</head>
+<body>
+   
+   
+   <div class="widewrapper main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 blog-main">
+                    <article class="blog-post">
+                        <header>
+                            <h1><%= @article.title %>
+                            <%= link_to 'Regresar', articles_path %> | <%= link_to 'Editar', edit_article_path(@article) %>
+                            </h1>
+                            <div class="lead-image">
+                               <img src="http://templateninja.net/themes/danish/v1.1/img/image-portfolio-03.jpg" alt="danish personal blog template" class="img-responsive">
+                                <div class="meta clearfix">
+                      
+                                    <div class="author">
+                                        <i class="fa fa-user"></i>
+                                        <span class="data">Alexander Rechsteiner</span>
+                                    </div>
+                                    <div class="date">
+                                        <i class="fa fa-calendar"></i>
+                                        <span class="data">26 July 2013</span>
+                                    </div>
+                                    <div class="comments">
+                                        <i class="fa fa-comments"></i>
+                                        <span class="data"><a href="#comments">26 Comments</a></span>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </header>
+                        <div class="body">
+                            
+                            <%= @article.text %>
+                            
+                        </div>
+                    </article>
+
+                    <aside class="row">
+                      <div class="col-md-10">
+                        </div>
+                       <div class="col-md-1">
+                           
+                            <a href="#" class="social-icon color-one">
+                                <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                        
+                       </div>                       
+                                             
+                          
+                          <div class="col-md-1">
+                           
+                            <a href="#" class="social-icon color-one">
+                                <i class="fa fa-facebook fa-2x"></i>
+                        </a>
+                        
+                       </div>
+                       
+                    </aside>
+
+                    <aside class="comments" id="comments">
+                        <hr>
+
+                        <h2><i class="fa fa-comments"></i> 24 Comments</h2>
+
+                       <%= render @article.comments %>
+                    
+                        
+                    </aside>
+
+                    <aside class="create-comment" id="create-comment">
+                        <hr>    
+
+                        <h2><i class="fa fa-heart"></i> Add Comment</h2>
+
+                        <%= render 'comments/form' %>
+                    </aside>
+                </div>
+                <aside class="col-md-4 blog-aside">
+                    
+                    <div class="aside-widget">
+                        <header>
+                            <h3>Próximas lecturas</h3>
+                        </header>
+                        <div class="body">
+                            <ul class="tales-list">
+                                <li><a href="index.html">Email Encryption Explained</a></li>
+                                <li><a href="#">Selling is a Function of Design.</a></li>
+                                <li><a href="#">It’s Hard To Come Up With Dummy Titles</a></li>
+                                <li><a href="#">Why the Internet is Full of Cats</a></li>
+                                <li><a href="#">Last Made-Up Headline, I Swear!</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                
+
+                    <div class="aside-widget">
+                        <header>
+                            <h3>Categorías</h3>
+                        </header>
+                        <div class="body clearfix">
+                            <ul class="tags">
+                                <li><a href="#">Reflexiones</a></li>
+                                <li><a href="#">Tips</a></li>
+                                <li><a href="#">Curiosidades</a></li>                          
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
 
