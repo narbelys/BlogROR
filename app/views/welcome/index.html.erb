@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <title>Infórmate</title>
 
 
     <!-- Custom Fonts -->
@@ -23,43 +23,20 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <style>
+    .navbar-custom{
+        background: 0 0;
+    }
+    </style>
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <%= image_tag("in_ico.png", :alt => "Logo", :width => 40, :height => 40) %> <span class="light">Infórmate</span>
-                </a>
-            </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="http://narbelys.comli.com/" target="_blank">Nosotros</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
+    <%= render 'header' %>
+    
     <!-- Intro Header -->
     <header class="intro">
         <div class="intro-body">
@@ -68,7 +45,13 @@
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Infórmante</h1>
                         <p class="intro-text">Publica tus artículos, opina y lee los de los demás</p>
-                        <%= link_to 'Ver todos los articulos', controller: 'articles' %>
+                        <h2>
+                            <%= link_to controller: 'articles' do %>
+                            <i class="fa fa-list-alt"></i>
+                            Ver artículos
+                            <% end%>
+                        </h2>
+                        
                         <!--<a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>-->
@@ -118,18 +101,18 @@
                     <div class="widget">
                         <h3>Artículos recientes</h3>
                         <ul class="list-unstyled">
-                            <li> <i class="fa fa-star"></i> <a href="#"> Lorem ipsum</a></li>
-                            <li> <i class="fa fa-star"></i> <a href="#"> Lorem</a></li>
-                            <li> <i class="fa fa-star"></i> <a href="#"> Lorem ipsum dolor</a></li>
-                            <li> <i class="fa fa-star"></i> <a href="#"> Lorem sit</a></li>
-                            <li> <i class="fa fa-star"></i> <a href="#"> Lorem dolor sit</a></li>
+                            <li> <a href="#"> <i class="fa fa-star"></i>  Lorem ipsum</a></li>
+                            <li> <a href="#"><i class="fa fa-star"></i> Lorem</a></li>
+                            <li> <a href="#"><i class="fa fa-star"></i> Lorem ipsum dolor</a></li>
+                            <li> <a href="#"><i class="fa fa-star"></i> Lorem sit</a></li>
+                            <li> <a href="#"><i class="fa fa-star"></i> Lorem dolor sit</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-sm-5">
                     <div class="footer-logo">
-                        <h2><i class="fa fa-heart"></i> Ncor.</h2>
+                        <h2> <a> <i class="fa fa-heart"></i></a> Ncor.</h2>
                         <p>narbelys@gmail.com</p>
                         <br>
                     </div>

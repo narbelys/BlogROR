@@ -25,7 +25,6 @@ class ArticlesController < ApplicationController
     end
     
     def show
-        print Article.find(id=5)
         @article = Article.find(params[:id])
     end
     

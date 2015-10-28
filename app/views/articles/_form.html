@@ -9,17 +9,57 @@
     </ul>
   </div>
   <% end %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
+  
+  <article class="blog-post">
+    <header>
+             <h2>
+              <div class="form-group">
+                <span> <%= link_to articles_path do %>
+                                <i class="fa fa-arrow-left"></i>
+                            <% end %>
+                            
+                    </span> <%= f.label :title, class: "control-label" %>
+                  <%= f.text_field :title, class: "form-control" %></p>
+              </div>
+              
+              </h2>
+        
+        
+        <div class="lead-image">
+           <img src="http://templateninja.net/themes/danish/v1.1/img/image-portfolio-03.jpg" alt="danish personal blog template" class="img-responsive">
+            <div class="meta clearfix">
+
+                <div class="author">
+                    <i class="fa fa-user"></i>
+                    <span class="data">Alexander Rechsteiner</span>
+                </div>
+                <div class="date">
+                    <i class="fa fa-calendar"></i>
+                    <span class="data">26 July 2013</span>
+                </div>
+                <div class="comments">
+                    <i class="fa fa-comments"></i>
+                    <span class="data"><a href="#comments">26 Comments</a></span>
+                </div>                                
+            </div>
+        </div>
+    </header>
+
+        
  
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
+    <div class="row">
+        <%= f.label :text %>
+        <%= f.text_area :text, class: "form-control" %>
+    </div>
+    
  
-  <p>
-    <%= f.submit %>
-  </p>
+    <div class="buttons clearfix">
+        <%= f.submit %>
+    </div>
+    </article>
 <% end %>
+
+
+
+
+
